@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1002466051839",
+    "project_id": "fir-firestore-92012",
+    "storage_bucket": "fir-firestore-92012.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002466051839:android:1cbf8432caf3c33f6e6eca",
+        "android_client_info": {
+          "package_name": "com.example.naeemnoman.firebasefirestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNSg-1zsiNWAm5vfGyZP2Z9QAr_PI1fDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
