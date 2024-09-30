@@ -5,6 +5,9 @@ plugins {
 }
 
 android {
+
+    buildFeatures.viewBinding = true
+
     namespace = "com.example.naeemnoman.firebasefirestore"
     compileSdk = 34
 

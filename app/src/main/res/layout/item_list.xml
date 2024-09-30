@@ -64,10 +64,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:weightSum="1"
         android:gravity="end"
-        android:paddingTop="10dp"/>
+        android:paddingTop="10dp">
+
+    <ImageButton
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/baseline_edit_24" />
+
+    <ImageButton
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/delete" />
 
 
+</LinearLayout>
 
-    
 </LinearLayout>
