@@ -23,6 +23,7 @@ class DataRepository {
                     val item = document.toObject(Data::class.java)
 
                 item.id = document.id
+                    list.add(item)
 
                 }
 
@@ -33,7 +34,7 @@ class DataRepository {
 
     }
 
-    fun addData(data: Data):Task<Void>{
+    fun addData(data: Data): Task<Void> {
         return dataCollection.document().set(data)
     }
 
@@ -42,7 +43,7 @@ class DataRepository {
     }
 
     fun deleteData(data: Data):Task<Void>{
-        return dataCollection.document(data.id!!).set(data)
+        return dataCollection.document(data.id!!).delete()
     }
 
 

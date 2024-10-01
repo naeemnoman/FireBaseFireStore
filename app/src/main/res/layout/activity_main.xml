@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="10dp"
+    android:padding="5dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -113,6 +114,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/saveBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
          />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

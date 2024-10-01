@@ -1,5 +1,7 @@
 package com.example.naeemnoman.firebasefirestore.model
 
+import com.google.firebase.Timestamp
+
 data class Data(
 
     var id:String? = null,
@@ -8,6 +10,6 @@ data class Data(
     val email:String? = null,
     val subject:String? = null,
     val birhtdate:String? = null,
-    val timestamp: Unit = null
+    val timestamp: Timestamp? = null
 
 )

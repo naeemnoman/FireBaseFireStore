@@ -1,6 +1,7 @@
 package com.example.naeemnoman.firebasefirestore.adapter
 
-import android.provider.ContactsContract.Data
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,19 +10,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.naeemnoman.firebasefirestore.MainActivity
 import com.example.naeemnoman.firebasefirestore.R
+import com.example.naeemnoman.firebasefirestore.model.Data
 
-class DataAdapter(private var data:List<Data>, private var itemClickListener: MainActivity):
+class DataAdapter(private var data:List<Data>, private var itemClickListener: ItemClickListener):
 RecyclerView.Adapter<DataAdapter.ViewHolder>(){
 
     interface ItemClickListener{
 
-        fun onEditItemClick(data:Data)
+        fun onEditItemClick(data: Data)
         fun onDeleteItemClick(data:Data)
 
     }
 
 
-    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
 
         val  stuid = itemView.findViewById<TextView>(R.id.idTxt)
         val  name = itemView.findViewById<TextView>(R.id.nameTxt)
@@ -34,7 +36,8 @@ RecyclerView.Adapter<DataAdapter.ViewHolder>(){
 
     }
 
-    fun updateData(newData: List<com.example.naeemnoman.firebasefirestore.model.Data>){
+
+    fun updateData(newData: List<Data>){
         this.data = newData
         notifyDataSetChanged()
     }
@@ -48,17 +51,20 @@ RecyclerView.Adapter<DataAdapter.ViewHolder>(){
 
 
     override fun getItemCount(): Int {
+
        return data.size
     }
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val item = data[position]
+
+
         holder.stuid.text = item.stuid
         holder.name.text = item.name
         holder.email.text = item.email
         holder.subject.text = item.subject
-        holder.birthdate.text = item.birthdate
+        holder.birthdate.text = item.birhtdate
 
         holder.edit.setOnClickListener{
             itemClickListener.onEditItemClick(item)
